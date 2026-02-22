@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Image Gallery</h1>
+    <p>Click any image to view full screen. Zoom and pan to explore in detail.</p>
+  </header>
+
+  <main class="gallery">
+    <div class="gallery-grid">
+      <!-- SVG -->
+      <article class="gallery-item" data-src="assets/images/1.svg" data-alt="Image 1">
+        <img src="assets/images/1.svg" alt="Image 1">
+        <span class="caption">Image 1 (SVG)</span>
+      </article>
+      <article class="gallery-item" data-src="assets/images/2.svg" data-alt="Image 2">
+        <img src="assets/images/2.svg" alt="Image 2">
+        <span class="caption">Image 2 (SVG)</span>
+      </article>
+      <!-- PNG/JPEG: add your own to assets/images/ or use external URLs -->
+      <article class="gallery-item" data-src="https://picsum.photos/1200/900" data-alt="Sample PNG">
+        <img src="https://picsum.photos/400/300" alt="Sample PNG">
+        <span class="caption">Sample (JPEG)</span>
+      </article>
+      <article class="gallery-item" data-src="https://picsum.photos/1200/900?random=2" data-alt="Sample JPEG">
+        <img src="https://picsum.photos/400/300?random=2" alt="Sample JPEG">
+        <span class="caption">Sample (JPEG)</span>
+      </article>
+      <article class="gallery-item" data-src="assets/images/3.svg" data-alt="Image 3">
+        <img src="assets/images/3.svg" alt="Image 3">
+        <span class="caption">Image 3 (SVG)</span>
+      </article>
+      <article class="gallery-item" data-src="assets/images/4.svg" data-alt="Image 4">
+        <img src="assets/images/4.svg" alt="Image 4">
+        <span class="caption">Image 4 (SVG)</span>
+      </article>
+      <article class="gallery-item" data-src="assets/images/5.svg" data-alt="Image 5">
+        <img src="assets/images/5.svg" alt="Image 5">
+        <span class="caption">Image 5 (SVG)</span>
+      </article>
+      <article class="gallery-item" data-src="assets/images/6.svg" data-alt="Image 6">
+        <img src="assets/images/6.svg" alt="Image 6">
+        <span class="caption">Image 6 (SVG)</span>
+      </article>
+    </div>
+  </main>
+
+  <!-- Full-screen lightbox with zoom -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-toolbar">
+      <button class="lightbox-zoom-in" aria-label="Zoom in">+</button>
+      <button class="lightbox-zoom-out" aria-label="Zoom out">−</button>
+      <button class="lightbox-reset" aria-label="Reset view">Reset</button>
+      <button class="lightbox-fullscreen" aria-label="Full screen">⛶</button>
+    </div>
+    <div class="lightbox-viewport">
+      <div class="lightbox-pan">
+        <img src="" alt="" id="lightbox-img">
+      </div>
+    </div>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
