@@ -148,6 +148,26 @@ header p {
   border-color: var(--accent);
 }
 
+.lightbox-download {
+  position: absolute;
+  top: 1rem;
+  right: 4.5rem;
+  background: var(--surface);
+  border: 1px solid #333;
+  color: var(--text);
+  font-size: 1.25rem;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+  transition: border-color 0.2s;
+}
+
+.lightbox-download:hover {
+  border-color: var(--accent);
+}
+
 .lightbox-toolbar {
   position: absolute;
   top: 1rem;
