@@ -1,15 +1,21 @@
 # Image Gallery
 
-A simple image gallery for GitHub Pages. Click any image to view it full screen, then zoom and pan to explore in detail.
+A simple image gallery. Click any image to view it full screen, then zoom and pan to explore in detail. Deploys to **Vercel** and **GitHub Pages**.
+
+## Deploy on Vercel
+
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click **Add New → Project**
+3. Import `moh-dev-stack/image-gallery`
+4. Click **Deploy** (no build config needed)
+5. Your site: `https://image-gallery-xxx.vercel.app`
 
 ## Deploy on GitHub Pages
 
-1. Create a new repository on GitHub (e.g. `image-gallery`)
-2. Push this folder to the repo
-3. Go to **Settings → Pages**
-4. Under "Source", select **Deploy from a branch**
-5. Choose the `main` branch and `/ (root)` folder
-6. Save — your site will be at `https://<username>.github.io/<repo>/`
+1. Go to repo **Settings → Pages**
+2. Under "Source", select **Deploy from a branch**
+3. Branch: `main`, folder: `/ (root)`
+4. Save — your site: `https://moh-dev-stack.github.io/image-gallery/`
 
 ## Supported Image Formats
 
