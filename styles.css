@@ -5,16 +5,15 @@
 }
 
 :root {
-  --bg: #0f0f12;
-  --surface: #1a1a20;
-  --text: #e8e8ed;
-  --text-muted: #8b8b9a;
-  --accent: #6366f1;
-  --accent-hover: #818cf8;
+  --bg: #000000;
+  --surface: #1a1a1a;
+  --text: #ffffff;
+  --text-muted: #999999;
+  --accent: #ff6600;
 }
 
 body {
-  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -23,22 +22,21 @@ body {
 
 header {
   text-align: center;
-  padding: 3rem 1.5rem 2rem;
+  padding: 2rem 1.5rem 1.5rem;
+  border-bottom: 1px solid #333;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #e8e8ed 0%, #a5b4fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
 }
 
 header p {
   color: var(--text-muted);
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
 }
 
 .gallery {
@@ -55,15 +53,14 @@ header p {
 
 .gallery-item {
   background: var(--surface);
-  border-radius: 12px;
+  border: 1px solid #333;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s;
 }
 
 .gallery-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent);
 }
 
 .gallery-item img {
@@ -78,6 +75,37 @@ header p {
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+.gallery-item--pdf .gallery-item-pdf-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0d0d;
+  border-bottom: 1px solid #333;
+}
+
+.gallery-item--pdf .pdf-icon {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.gallery-loading,
+.gallery-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem;
+}
+
+.gallery-empty code {
+  background: var(--surface);
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
 }
 
 /* Lightbox - full screen with zoom */
@@ -104,21 +132,20 @@ header p {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
+  background: var(--surface);
+  border: 1px solid #333;
   color: var(--text);
   font-size: 2rem;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
   cursor: pointer;
   line-height: 1;
   z-index: 10;
-  transition: background 0.2s;
+  transition: border-color 0.2s;
 }
 
 .lightbox-close:hover {
-  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent);
 }
 
 .lightbox-toolbar {
@@ -132,19 +159,18 @@ header p {
 }
 
 .lightbox-toolbar button {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
+  background: var(--surface);
+  border: 1px solid #333;
   color: var(--text);
   font-size: 1.25rem;
   width: 44px;
   height: 44px;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: border-color 0.2s;
 }
 
 .lightbox-toolbar button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent);
 }
 
 .lightbox-toolbar .lightbox-reset {
@@ -177,9 +203,29 @@ header p {
   max-width: 90vw;
   max-height: 75vh;
   object-fit: contain;
-  border-radius: 8px;
+  border: 1px solid #333;
   user-select: none;
   pointer-events: none;
+}
+
+.lightbox-pan--image {
+  display: inline-flex;
+}
+
+.lightbox-pdf {
+  display: none;
+  width: 90vw;
+  height: 85vh;
+  border: 1px solid #333;
+  background: #fff;
+}
+
+.lightbox-pdf.is-visible {
+  display: block;
+}
+
+.lightbox-pan--image.is-hidden {
+  display: none;
 }
 
 .lightbox-caption {

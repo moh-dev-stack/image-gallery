@@ -1,0 +1,34 @@
+{
+  "images": [
+    {
+      "src": "assets/images/1.svg",
+      "name": "1"
+    },
+    {
+      "src": "assets/images/2.svg",
+      "name": "2"
+    },
+    {
+      "src": "assets/images/3.svg",
+      "name": "3"
+    },
+    {
+      "src": "assets/images/4.svg",
+      "name": "4"
+    },
+    {
+      "src": "assets/images/5.svg",
+      "name": "5"
+    },
+    {
+      "src": "assets/images/6.svg",
+      "name": "6"
+    }
+  ],
+  "pdfs": [
+    {
+      "src": "assets/documents/final_presentation.pdf",
+      "name": "final_presentation"
+    }
+  ]
+}
