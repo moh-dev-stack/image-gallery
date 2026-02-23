@@ -1,28 +1,12 @@
 {
   "images": [
     {
-      "src": "assets/images/1.svg",
-      "name": "1"
+      "src": "assets/images/Five Block Taxonomy-questions.png",
+      "name": "Five Block Taxonomy-questions"
     },
     {
-      "src": "assets/images/2.svg",
-      "name": "2"
-    },
-    {
-      "src": "assets/images/3.svg",
-      "name": "3"
-    },
-    {
-      "src": "assets/images/4.svg",
-      "name": "4"
-    },
-    {
-      "src": "assets/images/5.svg",
-      "name": "5"
-    },
-    {
-      "src": "assets/images/6.svg",
-      "name": "6"
+      "src": "assets/images/Five Block Taxonomy-when-to-use-metrics.png",
+      "name": "Five Block Taxonomy-when-to-use-metrics"
     }
   ],
   "pdfs": [
