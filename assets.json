@@ -1,6 +1,14 @@
 {
   "images": [
     {
+      "src": "assets/images/Bloomberg AI Overview.jpg",
+      "name": "Bloomberg AI Overview"
+    },
+    {
+      "src": "assets/images/Data Quality.png",
+      "name": "Data Quality"
+    },
+    {
       "src": "assets/images/Five Block Taxonomy-questions.png",
       "name": "Five Block Taxonomy-questions"
     },
