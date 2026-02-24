@@ -21,6 +21,10 @@
     {
       "src": "assets/documents/Glossary.pdf",
       "name": "Glossary"
+    },
+    {
+      "src": "assets/documents/Presentation.pdf",
+      "name": "Presentation"
     }
   ]
 }
